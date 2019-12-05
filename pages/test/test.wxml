@@ -1,0 +1,8 @@
+<view class='content_width'>
+  <view>1</view>
+  <view>2</view>
+  <view>3</view>
+  <view>4</view>
+  <view>5</view>
+  <image src="../../images/pass.png" class="test_img"></image>
+</view>
