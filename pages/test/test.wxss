@@ -1,0 +1,13 @@
+/* pages/test/test.wxss */
+.content_width{
+  border:1px solid red;
+  display: flex;
+  flex-direction: row;
+}
+.content_width view{
+  border: 1px solid green;
+}
+.test_img{
+  width: 40rpx;
+  height: 40rpx;
+}

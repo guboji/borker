@@ -1,0 +1,26 @@
+/* pages/hellowx/hellowx.wxss */
+.red{
+  color:red
+}
+.demo-text-1{
+  width: 100%;
+  height: 50rpx;
+}
+/* .swiper_item{
+  width: 100%;
+} */
+swiper-item image{
+width: 100%;
+}
+.tabs{
+  display:flex;
+  flex-direction: row;
+}
+.tabs text{
+  margin:0 40rpx 0 40rpx;
+  width: 50%;
+  height: 50%;
+}
+.tabBorer{
+  color:red;
+}

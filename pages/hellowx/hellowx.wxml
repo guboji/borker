@@ -1,0 +1,30 @@
+<!--pages/hellowx/hellowx.wxml-->
+<view>
+<progress percent="100" active/>
+  <text class='red'>{{msg}}</text>
+  <view wx:for='{{arr}}' wx:key='{{index}}'>
+    <text>
+{{item}}
+</text>
+  </view>
+  <view wx:if="{{score>=90}}">A</view>
+  <view wx:if="{{score>=80 && score<90}}">B</view>
+  <view wx:if="{{score<80}}">C</view>
+  <!-- 轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <!-- <view class="swiper-item {{item}}"></view> -->
+        <image src='../../images/pass.png' class='swiper_item'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="tabs">
+    <text class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>页面1</text>
+    <text class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>页面2</text>
+  </view>
+  <swiper current="{{currentData}}" bindchange="bindchange">
+    <swiper-item><navigator url="../jumpPage/jumpPage?title={{score}}"  hover-class="none" >页面1详情</navigator></swiper-item>
+    <swiper-item> <navigator url="../index/index" open-type="switchTab" hover-class="other-navigator-hover">跳转到tabBar页面</navigator></swiper-item>
+  </swiper>
+</view>
